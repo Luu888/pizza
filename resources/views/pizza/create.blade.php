@@ -18,6 +18,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Pizza') }}</div>
+                <form action="{{route('pizza.store')}}" method="post">@csrf
 
                 <div class="card-body">
                     <div class="form-group">
@@ -30,13 +31,13 @@
                     </div>
                     <div class="form-inline">
                         <label>Pizza price($)</label>
-                        <input type="number" class="form-control" placeholder="small pizza price" />
-                        <input type="number" class="form-control" placeholder="medium pizza price" />
-                        <input type="number" class="form-control" placeholder="big pizza price" />
+                        <input type="number" class="form-control" name="small_pizza_price" placeholder="small pizza price" />
+                        <input type="number" class="form-control" name="medium_pizza_price" placeholder="medium pizza price" />
+                        <input type="number" class="form-control" name="large_pizza_price" placeholder="large pizza price" />
                     </div>
                     <div class="form-group">
                         <label for="description">Category</label>
-                        <select class="form-control">
+                        <select class="form-control" name="category">
                             <option value=""></option>
                             <option value="vegetarian">Vegetarian Pizza</option>
                             <option value="nonevegetarian">None vegetarian Pizza</option>
@@ -45,12 +46,13 @@
                     </div>
                     <div class="form-group">
                         <label>Image</label>
-                        <input type="file" class="form-control" name="image"/>
+                        <input type="file" name="image" class="form-control" name="image"/>
                     </div>
                     <div class="form-group text-center">
                         <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
