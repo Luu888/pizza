@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PizzaStoreRequest;
 use Illuminate\Http\Request;
+
 
 class PizzaController extends Controller
 {
@@ -32,9 +34,9 @@ class PizzaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PizzaStoreRequest $request)
     {
-        dd($request->all());
+        
     }
 
     /**
